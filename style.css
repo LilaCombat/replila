@@ -1,0 +1,71 @@
+body {
+  background-color: blue;
+  font-size: 18px;
+  color: pink;
+}
+
+#container {
+  margin: 3em;
+  width: 400px;
+}
+
+p {
+  color: black;
+}
+
+span {
+  color: pink;
+}
+
+.myClass {
+  display: flex;
+  justify-content: space-between;
+}
+.myClass li {
+  list-style: none;
+  background-color: green;
+}
+.myClass:hover li {
+  background-color: black;
+}
+
+.nested {
+  background-color: aquamarine;
+}
+.nested p {
+  color: white;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav li {
+  display: inline-block;
+}
+
+nav a {
+  text-decoration: none;
+}
+
+ul > li {
+  list-style: none;
+}
+
+.example-3 {
+  font-family: "Courier New", Courier, monospace;
+  font-weight: 600;
+  font-size: 19px;
+}
+
+.example-4 {
+  text-align: center;
+  text-transform: lowercase;
+  text-overflow: hidden;
+}
+
+.lastClass {
+  border-bottom: var();
+}/*# sourceMappingURL=style.css.map */

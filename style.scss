@@ -1,0 +1,206 @@
+@import "/node_modules/bootstrap/scss/"
+// // variable scope = 1. global (root) /2. local
+// :root{
+//     --orange:orange;
+//     --blue:blue;
+//     // --a:lightgreen;
+// }
+
+// h2{
+//     border-bottom: 2px solid var(--orange);
+// }
+
+// .box{
+//     color: var(--blue);
+// }
+
+// button{
+
+//     --button-color: orangered;
+//     background-color: var(--button-color);
+//     border: 1px solid var(--button-color);
+
+// }
+// //
+// .box{
+//     background-color: var(--a, lightblue);
+//     padding: 10px;
+//     margin: 10px;
+// }
+
+// .special{
+//     --a:red;
+// }
+
+$bg-color: blue;
+$myFontSize: 18px;
+$myWidth: 400px;
+$size: 1em;
+$color: pink;
+$colors: (
+  main: yellow,
+  second: green,
+);
+
+body {
+  background-color: $bg-color;
+  font-size: $myFontSize;
+  color: $color;
+}
+
+#container {
+  margin: $size * 3;
+  width: $myWidth;
+}
+
+// sass variable scope
+
+p {
+  $color: black;
+  color: $color;
+}
+
+span {
+  color: $color;
+}
+
+.myClass {
+  display: flex;
+  justify-content: space-between;
+
+  li {
+    list-style: none;
+    background-color: green;
+  }
+
+  &:hover li {
+    background-color: black;
+  }
+}
+
+//
+
+.nested {
+  background-color: aquamarine;
+  p {
+    color: white;
+  }
+}
+
+// .nested p {
+//   color: white;
+// }
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav li {
+  display: inline-block;
+}
+
+nav a {
+  text-decoration: none;
+}
+
+nav {
+  ul {
+  }
+
+  li {
+  }
+  a {
+  }
+}
+
+// ul > li{
+//     list-style: none;
+// }
+
+// h2 + p{
+//     border: 2px solid;
+// }
+
+ul {
+  > li {
+    list-style: none;
+  }
+}
+
+h2 {
+  + p {
+  }
+  + a {
+  }
+}
+
+// .example1 {
+//   font-size: 1rem;
+//   transition: {
+//     property: font-size;
+//     duration: 1s;
+//     delay: 2s;
+//   }
+
+//   &hover {
+//     font-size: 2rem;
+//   }
+// }
+
+// .example-1 {
+//   font-size: 1rem;
+//   transition-property: font-size;
+//   transition-duration: 1s;
+//   transition-delay: 2s;
+// }
+
+// .example-1:hover {
+//   font-size: 2rem;
+// }
+
+// .container{
+//     display: flex;
+//     flex-direction: column;
+//     flex-wrap: nowrap;
+// }
+
+// .container {
+//   flex: {
+//     direction: column;
+//     wrap: nowrap;
+//   }
+//   align-items: center;
+//   padding: 10px;
+// }
+
+.example-3 {
+  font: {
+    family: "Courier New", Courier, monospace;
+    weight: 600;
+    size: 19px;
+  }
+}
+
+.example-4 {
+  text: {
+    align: center;
+    transform: lowercase;
+    overflow: hidden;
+  }
+}
+
+// @IMPORT AND @EXTEND AND MIXIN AND PARTIAL
+
+$colors: (
+  main: yellow,
+  second: green,
+);
+$border-default: 10px solid map-get($colors, second)
+  // oben im code, nur runterkopiert
+
+// .lastClass {
+//   // border-bottom: $border-default;
+//   border-bottom: 10px solid map map-get($colors, main);
+// }
